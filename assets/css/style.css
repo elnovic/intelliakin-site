@@ -33,12 +33,12 @@ section{padding:96px 0;}
 
 /* NAV */
 header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-nav{max-width:var(--maxw);margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;}
+nav{width:100%;margin:0;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:10px;}
-.brand img{height:34px;width:auto;}
-.navlinks{display:none;gap:26px;align-items:center;}
-@media(min-width:980px){.navlinks{display:flex;}}
-.navlinks a{font-size:14px;font-weight:500;color:var(--navy);position:relative;padding:4px 0;}
+.brand img{height:56px;width:auto;}
+.navlinks{display:none;gap:16px;align-items:center;}
+@media(min-width:1300px){.navlinks{display:flex;}}
+.navlinks a{font-size:13.5px;font-weight:500;color:var(--navy);position:relative;padding:4px 0;white-space:nowrap;}
 .navlinks a.active{color:var(--electric);}
 .navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--electric);transition:width .25s ease;}
 .navlinks a:hover::after{width:100%;}
@@ -52,7 +52,7 @@ nav{max-width:var(--maxw);margin:0 auto;padding:14px 32px;display:flex;align-ite
 .navcta{display:none;}
 @media(min-width:761px){.navcta{display:inline-flex;}}
 .burger{display:flex;background:none;border:none;cursor:pointer;padding:6px;}
-@media(min-width:980px){.burger{display:none;}}
+@media(min-width:1300px){.burger{display:none;}}
 .burger span{width:22px;height:2px;background:var(--navy);margin:3px 0;display:block;border-radius:2px;}
 #mnav{display:none;flex-direction:column;gap:16px;padding:20px 32px 26px;border-top:1px solid var(--line);background:#fff;}
 #mnav.open{display:flex;}
@@ -260,7 +260,7 @@ form.cform{background:rgba(255,255,255,0.05);border:1px solid var(--line-dark);b
 /* Footer */
 footer{background:var(--navy-deep);color:#8FA3BE;padding:52px 0 28px;}
 .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;padding-bottom:36px;border-bottom:1px solid var(--line-dark);}
-.foot-brand img{height:30px;filter:brightness(0) invert(1);opacity:0.9;}
+.foot-brand img{height:52px;filter:brightness(0) invert(1);opacity:0.9;}
 .foot-brand p{font-size:13px;max-width:280px;margin-top:14px;color:#7387A3;}
 .foot-cols{display:flex;gap:56px;flex-wrap:wrap;}
 .foot-col h4{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#5F7592;margin-bottom:14px;font-weight:600;}
