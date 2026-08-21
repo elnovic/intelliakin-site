@@ -21,15 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Contact form (demo only — no backend)
-  const cform = document.getElementById('cform');
-  if (cform){
-    cform.addEventListener('submit', (e) => {
-      e.preventDefault();
-      document.getElementById('formStatus').textContent = "Message prêt à être envoyé — connectez ce formulaire à votre messagerie pour l'activer.";
-    });
-  }
-
   // Hero network animation ("K-Node" motif)
   const canvas = document.getElementById('netcanvas');
   if (canvas){
