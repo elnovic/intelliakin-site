@@ -130,34 +130,34 @@ const DIAG_QUESTIONS = [
 ];
 
 const DIAG_RESULTS = {
-  academie: {
+  formation: {
     tag: "Notre recommandation",
-    title: "L'Académie de l'Intelligence Artificielle",
-    text: "Votre priorité est de monter en compétences — sur vous-même ou vos équipes — avant d'aller plus loin. C'est exactement l'objectif de notre Académie : des formations courtes et pratiques, une reconversion professionnelle, ou un programme d'insertion pour les jeunes diplômés.",
-    link: "academie.html",
-    linktext: "Découvrir l'Académie de l'IA"
+    title: "La Formation en Intelligence Artificielle",
+    text: "Votre priorité est de monter en compétences — sur vous-même ou vos équipes — avant d'aller plus loin. C'est exactement l'objectif de notre pôle Formation : des sessions courtes et pratiques, une reconversion professionnelle, ou un programme d'insertion pour les jeunes diplômés.",
+    link: "formation.html",
+    linktext: "Découvrir la Formation"
   },
-  conseil: {
+  consulting: {
     tag: "Notre recommandation",
-    title: "Le Conseil en Intelligence Artificielle",
-    text: "Vous avez besoin d'y voir clair avant d'agir. Notre pôle Conseil commence par un audit de votre maturité numérique, un diagnostic de vos processus, puis une feuille de route priorisée et réaliste pour votre organisation.",
-    link: "conseil.html",
-    linktext: "Découvrir le Conseil en IA"
+    title: "Le Consulting en Intelligence Artificielle",
+    text: "Vous avez besoin d'y voir clair avant d'agir. Notre pôle Consulting commence par un audit de votre maturité numérique, un diagnostic de vos processus, puis une feuille de route priorisée et réaliste pour votre organisation.",
+    link: "consulting.html",
+    linktext: "Découvrir le Consulting"
   },
-  accompagnement: {
+  realisation: {
     tag: "Notre recommandation",
-    title: "L'Accompagnement de projets",
-    text: "Vous avez déjà une idée ou un projet en tête. Notre pôle Accompagnement des projets vous aide à choisir les bons outils, gérer le changement dans vos équipes et mesurer les résultats après la mise en œuvre.",
-    link: "accompagnement.html",
-    linktext: "Découvrir l'accompagnement de projets"
+    title: "La Réalisation de projet",
+    text: "Vous avez déjà une idée ou un projet en tête. Notre pôle Réalisation de projet vous aide à choisir les bons outils, gérer le changement dans vos équipes et mesurer les résultats après la mise en œuvre.",
+    link: "realisation-projet.html",
+    linktext: "Découvrir la Réalisation de projet"
   }
 };
 
 function diagRecommend(answers){
-  if (answers.objectif === 'formation' || answers.difficulte === 'formation' || answers.profil === 'etudiant') return DIAG_RESULTS.academie;
-  if (answers.objectif === 'projet') return DIAG_RESULTS.accompagnement;
-  if (answers.difficulte === 'competences' || answers.difficulte === 'cas_usage' || answers.objectif === 'conseil' || answers.usage_ia === 'non' || answers.usage_ia === 'inconnu') return DIAG_RESULTS.conseil;
-  return DIAG_RESULTS.conseil;
+  if (answers.objectif === 'formation' || answers.difficulte === 'formation' || answers.profil === 'etudiant') return DIAG_RESULTS.formation;
+  if (answers.objectif === 'projet') return DIAG_RESULTS.realisation;
+  if (answers.difficulte === 'competences' || answers.difficulte === 'cas_usage' || answers.objectif === 'conseil' || answers.usage_ia === 'non' || answers.usage_ia === 'inconnu') return DIAG_RESULTS.consulting;
+  return DIAG_RESULTS.consulting;
 }
 
 function initDiagnostic(){
